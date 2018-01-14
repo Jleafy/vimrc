@@ -9,10 +9,11 @@
 " => Load pathogen paths
 """"""""""""""""""""""""""""""
 let s:vim_runtime = expand('<sfile>:p:h')."/.."
-call pathogen#infect(s:vim_runtime.'/sources_forked/{}')
-call pathogen#infect(s:vim_runtime.'/sources_non_forked/{}')
+call pathogen#infect('~/.vim_runtime/sources_forked/{}')
+call pathogen#infect('~/.vim_runtime/sources_non_forked/{}')
 call pathogen#infect(s:vim_runtime.'/my_plugins/{}')
 call pathogen#helptags()
+
 
 """"""""""""""""""""""""""""""
 " => bufExplorer plugin
@@ -73,7 +74,7 @@ let NERDTreeShowHidden=0
 let NERDTreeIgnore = ['\.pyc$', '__pycache__']
 let g:NERDTreeWinSize=35
 map <leader>nn :NERDTreeToggle<cr>
-map <leader>nb :NERDTreeFromBookmark<Space>
+map <leader>nb :NERDTreeFromBookmark
 map <leader>nf :NERDTreeFind<cr>
 
 
@@ -85,7 +86,7 @@ let g:multi_cursor_next_key="\<C-s>"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => surround.vim config
-" Annotate strings with gettext 
+" Annotate strings with gettext http://amix.dk/blog/post/19678
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 vmap Si S(i_<esc>f)
 au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
@@ -162,3 +163,24 @@ nnoremap <silent> <leader>c :call SyntasticCheckCoffeescript()<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:gitgutter_enabled=0
 nnoremap <silent> <leader>d :GitGutterToggle<cr>
+
+
+""""""""""""""""""""""""""""""
+" => YankStack
+""""""""""""""""""""""""""""""
+"nmap <c-p> <Plug>yankstack_substitute_older_paste
+"nmap <c-P> <Plug>yankstack_substitute_newer_paste
+
+
+"""""""""""""""""""""""""""""""""""""""
+" => vim-autoclose
+"""""""""""""""""""""""""""""""""""""""
+"let g:autoclose_vim_commentmode = 1
+
+
+"""""""""""""""""""""""""""""""""""""""
+" => incsearch.vim
+"""""""""""""""""""""""""""""""""""""""
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)

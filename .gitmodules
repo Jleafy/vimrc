@@ -1,0 +1,9 @@
+[submodule "my_plugins/vim-hybrid"]
+	path = my_plugins/vim-hybrid
+	url = git://github.com/w0ng/vim-hybrid.git
+[submodule "my_plugins/vim-autoclose"]
+	path = my_plugins/vim-autoclose
+	url = git://github.com/spf13/vim-autoclose.git
+[submodule "my_plugins/incsearch.vim"]
+	path = my_plugins/incsearch.vim
+	url = git://github.com/haya14busa/incsearch.vim.git

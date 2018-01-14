@@ -63,15 +63,5 @@ au FileType gitcommit call setpos('.', [0, 1, 1, 0])
 " => Shell section
 """"""""""""""""""""""""""""""
 if exists('$TMUX') 
-    if has('nvim')
-        set termguicolors
-    else
-        set term=screen-256color 
-    endif
+    set term=screen-256color 
 endif
-
-
-""""""""""""""""""""""""""""""
-" => Twig section
-""""""""""""""""""""""""""""""
-autocmd BufRead *.twig set syntax=html filetype=html
