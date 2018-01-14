@@ -16,9 +16,6 @@ from os import path
 
 #--- Globals ----------------------------------------------
 PLUGINS = """
-vim-autoclose https://github.com/spf13/vim-autoclose
-vim-hybrid https://github.com/w0ng/vim-hybrid
-incsearch.vim https://github.com/haya14busa/incsearch.vim
 ack.vim https://github.com/mileszs/ack.vim
 ag.vim https://github.com/rking/ag.vim
 bufexplorer https://github.com/corntrace/bufexplorer
